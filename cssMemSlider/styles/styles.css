@@ -89,7 +89,7 @@ input:checked + label span {
   background-color: cornflowerblue;
 }
 
-label span:hover {
+label:hover span {
   border: 0.2vw solid white;
 }
 
