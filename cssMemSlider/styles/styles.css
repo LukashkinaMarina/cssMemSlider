@@ -1,0 +1,78 @@
+body {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+}
+
+.slider {
+  width: 60vw;
+  height: 30vw;
+  display: flex;
+  flex-flow: row-reverse;
+  flex-wrap: wrap-reverse;
+}
+
+.messages {
+  width: 100%;
+}
+
+.messages p {
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  color: white;
+}
+
+.images {
+  height: 100%;
+  width: 100%;
+  border-radius: 1.5vw;
+  overflow: hidden;
+}
+
+img {
+  display: none;
+  animation: image 0.5s;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+p {
+  display: none;
+  margin: 0;
+  margin-top: 20px;
+  font-size: 2vw;
+  animation: message 0.5s;
+}
+
+input {
+  display: none;
+}
+
+input:checked + label span {
+  background-color: white;
+}
+
+label:hover span {
+  background-color: gray;
+}
+
+label {
+  display: flex;
+  width: 2.5vw;
+  height: 2.5vw;
+  border-radius: 50%;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+span {
+  display: block;
+  width: 50%;
+  height: 50%;
+  border: 1px solid white;
+  border-radius: 50%;
+  background-color: transparent;
+}
