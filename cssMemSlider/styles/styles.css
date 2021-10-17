@@ -1,0 +1,155 @@
+@media (min-width: 1025px) {
+  .slider {
+    justify-content: none;
+  }
+  p {
+    position: relative;
+    top: 90%;
+  }
+}
+
+@media (max-width: 1024px) {
+  .slider {
+    justify-content: center;
+  }
+  .messages {
+    position: relative;
+    display: flex;
+    top: 30%;
+  }
+  p {
+    font-size: 3vw !important;
+  }
+
+  label {
+    width: 3vw !important;
+    height: 3vw !important;
+  }
+}
+
+label:active {
+  opacity: 0.7;
+}
+
+body {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+  overflow: hidden;
+}
+
+.slider {
+  width: 65vw;
+  height: 30vw;
+  display: flex;
+  flex-flow: row-reverse;
+  flex-wrap: wrap-reverse;
+}
+
+.messages {
+  width: 100%;
+  display: flex;
+}
+
+.messages p {
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  color: white;
+}
+
+.images {
+  height: 100%;
+  width: 100%;
+  border-radius: 1.5vw;
+  overflow: hidden;
+}
+
+img {
+  display: none;
+  animation: image 0.3s;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+p {
+  display: none;
+  margin: 0;
+  font-size: 2vw;
+  animation: message 0.3s;
+}
+
+input {
+  display: none;
+}
+
+input:checked + label span {
+  background-color: cornflowerblue;
+}
+
+label:hover span {
+  border: 0.2vw solid white;
+}
+
+input:checked:hover + label span {
+  background-color: white;
+  border: 0.2vw solid white;
+}
+
+.radio1:checked ~ .images > img:nth-child(1),
+.radio2:checked ~ .images > img:nth-child(2),
+.radio3:checked ~ .images > img:nth-child(3),
+.radio4:checked ~ .images > img:nth-child(4),
+.radio5:checked ~ .images > img:nth-child(5),
+.radio1:checked ~ .messages p:nth-child(1),
+.radio2:checked ~ .messages p:nth-child(2),
+.radio3:checked ~ .messages p:nth-child(3),
+.radio4:checked ~ .messages p:nth-child(4),
+.radio5:checked ~ .messages p:nth-child(5) {
+  display: block;
+}
+
+label {
+  display: flex;
+  width: 2.5vw;
+  height: 2.5vw;
+  border-radius: 50%;
+  background-color: transparent;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+label span {
+  display: block;
+  width: 40%;
+  height: 40%;
+  border: 0.2vw solid cornflowerblue;
+  border-radius: 50%;
+  background-color: transparent;
+}
+
+@keyframes message {
+  0% {
+    transform: translateX(10em);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes image {
+  0% {
+    transform: translate(100%, 0);
+  }
+
+  100% {
+    transform: translate(0, 0) rotate(0);
+  }
+}
