@@ -2,6 +2,10 @@
   .slider {
     justify-content: none;
   }
+  p {
+    position: relative;
+    top: 90%;
+  }
 }
 
 @media (max-width: 1024px) {
@@ -11,7 +15,7 @@
   .messages {
     position: relative;
     display: flex;
-    top: 60px;
+    top: 20%;
   }
 }
 
@@ -61,7 +65,6 @@ img {
 p {
   display: none;
   margin: 0;
-  margin-top: 20px;
   font-size: 2vw;
   animation: message 0.5s;
 }
@@ -107,14 +110,14 @@ label span {
   display: block;
   width: 40%;
   height: 40%;
-  border: 1px solid white;
+  border: 0.2vw solid white;
   border-radius: 50%;
   background-color: transparent;
 }
 
 @keyframes message {
   0% {
-    transform: translateX(100px);
+    transform: translateX(10em);
     opacity: 0;
   }
 
