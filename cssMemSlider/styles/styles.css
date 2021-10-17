@@ -1,3 +1,20 @@
+@media (min-width: 1024px) {
+  .slider {
+    justify-content: none;
+  }
+}
+
+@media (max-width: 1023px) {
+  .slider {
+    justify-content: center;
+  }
+  .messages {
+    display: flex;
+    height: 80px;
+    align-items: self-end;
+  }
+}
+
 body {
   display: flex;
   width: 100vw;
@@ -5,6 +22,7 @@ body {
   justify-content: center;
   align-items: center;
   background-color: black;
+  overflow: hidden;
 }
 
 .slider {
@@ -59,6 +77,19 @@ label:hover span {
   background-color: gray;
 }
 
+.radio1:checked ~ .images > img:nth-child(1),
+.radio2:checked ~ .images > img:nth-child(2),
+.radio3:checked ~ .images > img:nth-child(3),
+.radio4:checked ~ .images > img:nth-child(4),
+.radio5:checked ~ .images > img:nth-child(5),
+.radio1:checked ~ .messages p:nth-child(1),
+.radio2:checked ~ .messages p:nth-child(2),
+.radio3:checked ~ .messages p:nth-child(3),
+.radio4:checked ~ .messages p:nth-child(4),
+.radio5:checked ~ .messages p:nth-child(5) {
+  display: block;
+}
+
 label {
   display: flex;
   width: 2.5vw;
@@ -75,4 +106,26 @@ span {
   border: 1px solid white;
   border-radius: 50%;
   background-color: transparent;
+}
+
+@keyframes message {
+  0% {
+    transform: translateX(100px);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes image {
+  0% {
+    transform: translate(100%, 0);
+  }
+
+  100% {
+    transform: translate(0, 0) rotate(0);
+  }
 }
